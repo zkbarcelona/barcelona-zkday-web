@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta name="title" content="Barcelona zkDay">
+		<meta name="description" content="" />
+		<meta charset="utf-8">
+		<title>Barcelona zkDay</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+		<link rel="stylesheet" href="https://latex.now.sh/style.min.css" />
+	</head>
+
+	<body>
+		<div id="dark-mode-toggle" style="float:right!important;font-size:150%;cursor:pointer;">☾</div>
+		<br><br>
+
+		<h1>Barcelona zkDay - April 22</h1>
+
+		<div class="abstract">
+			<h2>Abstract</h2>
+			<p>
+			A aqui va la descripcio de l'evento en angles. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			<br>Date: 2024-04-22
+			</p>
+		</div>
+
+		<h2>Description</h2>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		<br>
+		Test $LaTeX$ math mode inline test: $f(x) = \sum_{i=0}^n \alpha_i \cdot x^i$
+		<br>
+		And $LaTeX$ non-inline:
+		$$f \left( \sum_{i=0}^k a_i L_i(X) \right) = \sum_{i=0}^k f(a_i) L_i(X) + Z(X) Q(X)$$
+
+		<h2>Schedule</h2>
+
+		<ul style="list-style-type: none;">
+			<li>10.00h: Doors open</li>
+			<li>10.45h: <b>Welcome to Barcelona zkDay</b></li>
+			<li>11.00h: <b>Presentation 1 title</b> - Speaker Name
+				<br>Brief description
+			</li>
+			<li>11.30h: <b>Presentation 2 title</b> - Speaker Name
+				<br>Brief description
+			</li>
+			<li>12.00h: <b>Presentation 3 title</b> - Speaker Name
+				<br>Brief description
+			</li>
+			<li>12.30h: <b>Presentation 4 title</b> - Speaker Name
+				<br>Brief description
+			</li>
+			<li>13.00h: Lunch break</li>
+			<li>15.00h: <b>Presentation 5 title</b> - Speaker Name
+				<br>Brief description
+			</li>
+			<li>15.30h: <b>Presentation 6 title</b> - Speaker Name
+				<br>Brief description
+			</li>
+			<li>16.00h: <b>Presentation 7 title</b> - Speaker Name
+				<br>Brief description
+			</li>
+			<li>16.30h: <b>Presentation 8 title</b> - Speaker Name
+				<br>Brief description
+			</li>
+			<li>17.00h: <b>Presentation 9 title</b> - Speaker Name
+				<br>Brief description
+			</li>
+			<li>17.30h: <b>Presentation 10 title</b> - Speaker Name
+				<br>Brief description
+			</li>
+			<li>18.00h: <b>Closing remarks and drinks</b>
+			</li>
+		</ul>
+
+		
+		<h2>Location</h2>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+		<!-- the following embedded map has an extra CSS filter to remove colors to make it more aligned with the web style -->
+		<iframe style="filter:grayscale(100%);" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.3022701439163!2d2.1886275770768973!3d41.41095667129679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a3a3517f041d%3A0x6297055e3d4f368!2sAkasha%20Hub%20Barcelona!5e0!3m2!1ses!2ses!4v1707412579202!5m2!1ses!2ses" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+		<h2>Tickets</h2>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		<br>
+		Normal ticket: 15€<br>
+		Student ticket: 10€
+		<br>
+		<a href="https://lu.ma/barcelona-zkday">https://lu.ma/barcelona-zkday</a>
+
+		<h2>Sponsors</h2>
+
+
+		<!-- configs -->
+		<script>
+			// dark mode button
+			document.querySelector("#dark-mode-toggle")
+				.addEventListener('click', () => {
+					document.body.classList.toggle("latex-dark");
+				});
+
+			// LaTeX (MathJax) config
+			MathJax = {
+				tex: {
+					inlineMath: [['$', '$'], ['\\(', '\\)']]
+				},
+				svg: {
+					fontCache: 'global'
+				}
+			};
+		</script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	</body>
+</html>
