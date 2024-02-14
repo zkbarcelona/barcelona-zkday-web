@@ -1,43 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta name="title" content="Barcelona zkDay">
-		<meta name="description" content="" />
-		<meta charset="utf-8">
-		<title>Barcelona zkDay</title>
+<head>
+	<meta name="title" content="Barcelona zkDay">
+	<meta name="description" content="" />
+	<meta charset="utf-8">
+	<title>Barcelona zkDay 2024</title>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
 
-		<link rel="stylesheet" href="https://latex.now.sh/style.min.css" />
-	</head>
+	<link rel="stylesheet" href="https://latex.now.sh/style.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<body>
-		<div id="dark-mode-toggle" style="float:right!important;font-size:150%;cursor:pointer;">☾</div>
-		<br><br>
+	<style>
+		table,
+		th,
+		td {
+			border: 0px solid black;
+		}
 
-		<h1>Barcelona zkDay - April 22</h1>
+		.break-row {
+			border-top: 3px double black;
+			border-bottom: 3px double black;
+		}
 
-		<div class="abstract">
+		.break-row td {
+			text-align: center;
+		}
+
+		.table-container {
+			width: max-content;
+			margin: 0 auto;
+
+		}
+	</style>
+
+</head>
+
+<body style="max-width: 100ch;" class="custom-body-class libertinus">
+	<div id="dark-mode-toggle" style="float:right!important;font-size:150%;cursor:pointer;">☾</div>
+	<br><br>
+
+	<h1 style="text-align: center;">zkDay Barcelona - April 22$^\text{nd}$, 2024</h1>
+
+	<!-- <div class="abstract">
 			<h2>Abstract</h2>
 			<p>
 			A aqui va la descripcio de l'evento en angles. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 			<br>Date: 2024-04-22
 			</p>
-		</div>
+		</div> -->
 
-		<h2>Description</h2>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		<br>
-		Test $LaTeX$ math mode inline test: $f(x) = \sum_{i=0}^n \alpha_i \cdot x^i$
-		<br>
-		And $LaTeX$ non-inline:
-		$$f \left( \sum_{i=0}^k a_i L_i(X) \right) = \sum_{i=0}^k f(a_i) L_i(X) + Z(X) Q(X)$$
+	<h2>Description</h2>
+	<!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	<br>
+	Test $LaTeX$ math mode inline test: $f(x) = \sum_{i=0}^n \alpha_i \cdot x^i$
+	<br>
+	And $LaTeX$ non-inline:
+	$$f \left( \sum_{i=0}^k a_i L_i(X) \right) = \sum_{i=0}^k f(a_i) L_i(X) + Z(X) Q(X)$$ -->
 
-		<h2>Schedule</h2>
+	zkDay Barcelona aims to be a full day dedicated to zero-knowledge cryptography and its applications. The event will feature a series of talks by leading experts in the field, covering a wide range of topics from the theoretical foundations of zero-knowledge proofs to the latest developments in the area. The event will also provide an opportunity for networking and collaboration among researchers and practitioners working on zero-knowledge cryptography.
 
-		<ul style="list-style-type: none;">
+	<h2>Event topics</h2>
+		<ul>
+			<li>Zero-Knowledge Cryptography</li>
+			<li>Proving Systems</li>
+			<li>Probabilistic Proof Systems</li>
+			<li>Folding Schemas</li>
+		</ul>
+	
+
+	<h2>Speakers</h2>
+
+	<h2>Schedule</h2>
+	<div class="table-container">
+
+
+		<table style="text-align: center;">
+			<tr>
+				<th>Time</th>
+				<th>Title</th>
+				<th>Speaker</th>
+				<th>Description</th>
+			</tr>
+			<tr style="border-top: 2px solid black;">
+				<td style="text-align: center;">10.00h</td>
+				<td style="text-align: center;" colspan="3">Doors open</td>
+			</tr>
+			<tr style="border-bottom: 3px double black;">
+				<td style="text-align: center;">10.45h</td>
+				<td style="text-align: center;" colspan="3"><b>Welcome to Barcelona zkDay 2024</b></td>
+			</tr>
+			<tr>
+				<td>11.00h - 11.30h</td>
+				<td>Presentation 1 title</td>
+				<td>Speaker Name 1</td>
+				<td>Brief description 1</td>
+			</tr>
+			<tr>
+				<td>11.30h - 12.00h</td>
+				<td>Presentation 2 title</td>
+				<td>Speaker Name 2</td>
+				<td>Brief description 2</td>
+			</tr>
+			<tr class="break-row">
+				<td>12.00h - 12.15h</td>
+				<td colspan="4">Break (15 minutes)</td>
+			</tr>
+			<tr>
+				<td>12.15h - 12.45h</td>
+				<td>Presentation 3 title</td>
+				<td>Speaker Name 3</td>
+				<td>Brief description 3</td>
+			</tr>
+			<tr>
+				<td>12.45h - 13.15h</td>
+				<td>Presentation 4 title</td>
+				<td>Speaker Name 4</td>
+				<td>Brief description 4</td>
+			</tr>
+			<tr class="break-row">
+				<td>13.15h - 15.15h</td>
+				<td colspan="3">Lunch break (2 hours)</td>
+			</tr>
+			<tr>
+				<td>15.15h - 15.45h</td>
+				<td>Presentation 5 title</td>
+				<td>Speaker Name 5</td>
+				<td>Brief description 5</td>
+			</tr>
+			<tr>
+				<td>15.45h - 16.15h</td>
+				<td>Presentation 6 title</td>
+				<td>Speaker Name 6</td>
+				<td>Brief description 6</td>
+			</tr>
+			<tr class="break-row">
+				<td>16.15h - 16.30h</td>
+				<td colspan="3">Break (15 minutes)</td>
+			</tr>
+			<tr>
+				<td>16.30h - 17.00h</td>
+				<td>Presentation 7 title</td>
+				<td>Speaker Name 7</td>
+				<td>Brief description 7</td>
+			</tr>
+			<tr>
+				<td>17.00h - 17.30h</td>
+				<td>Presentation 8 title</td>
+				<td>Speaker Name 8</td>
+				<td>Brief description 8</td>
+			</tr>
+			<tr class="break-row">
+				<td>17.30h - 17.45h</td>
+				<td colspan="3">Break (15 minutes)</td>
+			</tr>
+			<tr>
+				<td>17.45h - 18.15h</td>
+				<td>Presentation 9 title</td>
+				<td>Speaker Name 9</td>
+				<td>Brief description 9</td>
+			</tr>
+			<tr>
+				<td>18.15h - 18.45h</td>
+				<td>Presentation 10 title</td>
+				<td>Speaker Name 10</td>
+				<td>Brief description 10</td>
+			</tr>
+			<tr class="break-row" style="border-bottom: 2px solid black;">
+				<td>18.45h - 21.00h</td>
+				<td colspan="3">Closing remarks and drinks</td>
+			</tr>
+		</table>
+	</div>
+
+	<!-- <ul style="list-style-type: none;">
 			<li>10.00h: Doors open</li>
 			<li>10.45h: <b>Welcome to Barcelona zkDay</b></li>
 			<li>11.00h: <b>Presentation 1 title</b> - Speaker Name
@@ -73,45 +213,47 @@
 			</li>
 			<li>18.00h: <b>Closing remarks and drinks</b>
 			</li>
-		</ul>
-
-		
-		<h2>Location</h2>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-		<!-- the following embedded map has an extra CSS filter to remove colors to make it more aligned with the web style -->
-		<iframe style="filter:grayscale(100%);" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.3022701439163!2d2.1886275770768973!3d41.41095667129679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a3a3517f041d%3A0x6297055e3d4f368!2sAkasha%20Hub%20Barcelona!5e0!3m2!1ses!2ses!4v1707412579202!5m2!1ses!2ses" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-		<h2>Tickets</h2>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		<br>
-		Normal ticket: 15€<br>
-		Student ticket: 10€
-		<br>
-		<a href="https://lu.ma/barcelona-zkday">https://lu.ma/barcelona-zkday</a>
-
-		<h2>Sponsors</h2>
+		</ul> -->
 
 
-		<!-- configs -->
-		<script>
-			// dark mode button
-			document.querySelector("#dark-mode-toggle")
-				.addEventListener('click', () => {
-					document.body.classList.toggle("latex-dark");
-				});
+	<h2>Venue</h2>
+		The venue for this event is the Akasha Hub Barcelona, located at Verneda Street number 19, Warehouse 1, 08018 Barcelona (Spain).
 
-			// LaTeX (MathJax) config
-			MathJax = {
-				tex: {
-					inlineMath: [['$', '$'], ['\\(', '\\)']]
-				},
-				svg: {
-					fontCache: 'global'
-				}
-			};
-		</script>
-		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<!-- the following embedded map has an extra CSS filter to remove colors to make it more aligned with the web style -->
+	<iframe style="margin: 0 auto;"
+		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.3022701439163!2d2.1886275770768973!3d41.41095667129679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a3a3517f041d%3A0x6297055e3d4f368!2sAkasha%20Hub%20Barcelona!5e0!3m2!1ses!2ses!4v1707412579202!5m2!1ses!2ses"
+		width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+		referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-	</body>
+	<h2>Tickets</h2>
+	<ul>
+		<il>Normal ticket: 15€</il>
+		<il>Student ticket: 10€</il>
+	</ul>
+	<a href="https://lu.ma/barcelona-zkday">https://lu.ma/barcelona-zkday</a>
+
+	<h2>Sponsors</h2>
+
+	<!-- configs -->
+	<script>
+		// dark mode button
+		document.querySelector("#dark-mode-toggle")
+			.addEventListener('click', () => {
+				document.body.classList.toggle("latex-dark");
+			});
+
+		// LaTeX (MathJax) config
+		MathJax = {
+			tex: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']]
+			},
+			svg: {
+				fontCache: 'global'
+			}
+		};
+	</script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+
 </html>
