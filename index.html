@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" onclick="easteregg()">
 
 <head>
 	<meta name="title" content="Barcelona Succinct zkDay">
@@ -210,18 +210,7 @@
 				logo.src = logo.src.includes("zkcat13.svg") ? "zkcat13d.svg" : "zkcat13.svg";
 			});
 
-		// LaTeX (MathJax) config
-		MathJax = {
-			tex: {
-				inlineMath: [['$', '$'], ['\\(', '\\)']]
-			},
-			svg: {
-				fontCache: 'global'
-			}
-		};
 	</script>
-	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
 
 	<footer>
 		<div style="display: flex; justify-content: space-between; align-items: center;">
@@ -247,11 +236,65 @@
 		</div>
 	</footer>
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 
+        <!-- The loading of KaTeX is deferred to speed up page rendering -->
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
 
+        <!-- To automatically render math in text elements, include the auto-render extension: -->
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 
+	<script>
+	  // place here the equations that you want to display in the easter egg:
+	  //
+	  // WARNING: if you use some '\', needs to be double.
+	  // Eg: '\alpha' will not work, needs to be '\\alpha'.
+	  //
+	  // Also, please add a comment mentioning from which paper comes
+	  // the equation, just to keep track of it.
+	  let equations = [
+		      "\\hat{e}(\\pi, [Z(\\tau)]_2) == \\hat{e}(c - [I(\\tau)]_1, H)", // KZG
+		      "[a]G + [r'] H + [ab] U == P' + \\sum_{j=1}^k ( [u_j^2] L_j + [u_j^{-2}] R_j)", // IPA
+		      "s'G \\stackrel{?}{=} R' + \\mathcal{H}(R', m)X", // Schnorr blind sig
+		      "\\phi^* = L_0(\\gamma) \\phi + \\sum_{i \\in [k]} L_i(\\gamma) \\cdot \\phi_i", // ProtoGalaxy
+		      "f \\left( \\sum_{i=0}^k a_i L_i(X) \\right) = \\sum_{i=0}^k f(a_i) L_i(X) + Z(X) Q(X)", // ProtoGalaxy
+		      "e(g_1, \\sigma_{aggr})==e(pk_{aggr}, H(m))", // BLS
+		      "f_i(x) = f_i^L(x^2) + x f_i^R(x^2)", // FRI
+		     "\\sum_{i=1}^q c_i \\cdot \\left( \\prod_{j \\in S_i} \\left( \\sum_{y \\in \\{0,1\\}^{\\log m}} \\widetilde{M}_j(x, y) \\cdot \\widetilde{z}(y) \\right) \\right)", // Committed CCS
+		     "\\Psi_j(X, Y) =\\sum_{i=1}^n \\psi_{j, \\sigma_{j, i}} \\cdot X^i \\cdot Y^{\\sigma_{j, i}}", // Sonic
+		     "\\widetilde{F}_{io}(x)=\\left( \\sum_{y \\in \\{0,1\\}^s} \\widetilde{A}(x, y) \\cdot \\widetilde{Z}(y) \\right) \\cdot \\left( \\sum_{y \\in \\{0,1\\}^s} \\widetilde{B}(x, y) \\cdot \\widetilde{Z}(y) \\right) - \\sum_{y \\in \\{0,1\\}^s} \\widetilde{C}(x, y) \\cdot \\widetilde{Z}(y)", // Spartan
+		      "e_n(P, Q) = \\frac{f_P(Q+T)}{f_P(T)} / \\frac{f_Q(P+S)}{f_Q(S)}", // Weil pairing
+		    ];
+	  let katexConfig = {
+		      delimiters: [
+				  {left: '$$', right: '$$', display: true},
+				  {left: '$', right: '$', display: false},
+				  {left: '\\(', right: '\\)', display: false},
+				  {left: '\\[', right: '\\]', display: true},
+				],
+		      throwOnError : true
+		    };
+	  document.addEventListener("DOMContentLoaded", function() {
+		      renderMathInElement(document.body, katexConfig);
+		    });
+	  function easteregg() {
+		      console.log("clicked");
 
+		      var fullWidth = window.innerWidth;
+		      var fullHeight = window.innerHeight;
 
+		      var elem = document.createElement("span");
+		      let random_i = Math.floor(Math.random() * equations.length);
+		      console.log("rand", random_i);
+		      elem.innerHTML = "$$"+equations[random_i]+"$$";
+		      elem.style.position = "fixed";
+		      elem.style.color = "gray";
+		      elem.style.left = Math.round(Math.random() * fullWidth) + "px";
+		      elem.style.top = Math.round(Math.random() * fullHeight) + "px";
+		      document.body.appendChild(elem);
+		      renderMathInElement(elem, katexConfig);
+		    }
+	</script>
 </body>
 
 </html>
