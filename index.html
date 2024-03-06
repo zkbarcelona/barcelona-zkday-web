@@ -42,7 +42,14 @@
 	<div id="dark-mode-toggle" style="float:right!important;font-size:150%;cursor:pointer;">☾</div>
 	<br><br>
 
-	<h1 style="text-align: center;"><span style="font-size:70%;">(succinct)</span> zkDay Barcelona <span style="font-size:70%;">- April 22$^\text{nd}$, 2024</span></h1>
+
+	<h1 style="text-align: center;">
+		<img id="logo" style="display: block; margin: auto" src="zkcat13.svg" alt="barcelona zkday logo" width="20%"/>
+		<span style="font-size:70%;">(succinct)</span>
+		zkDay Barcelona
+		<br>
+		<span style="font-size:70%;">April 22$^\text{nd}$, 2024</span>
+	</h1>
 
 	<div class="abstract">
 	<h2>Abstract</h2>
@@ -160,6 +167,8 @@
 		document.querySelector("#dark-mode-toggle")
 			.addEventListener('click', () => {
 				document.body.classList.toggle("latex-dark");
+				let logo = document.getElementById("logo");
+				logo.src = logo.src.includes("zkcat13.svg") ? "zkcat13d.svg" : "zkcat13.svg";
 			});
 
 		// LaTeX (MathJax) config
