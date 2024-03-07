@@ -8,13 +8,18 @@
 	<title>Barcelona zkDay 2024</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="zkcat13.svg" rel="icon" type="image/svg+xml" media="(prefers-color-scheme: light)"/>
-	<link href="zkcat13d.svg" rel="icon" type="image/svg+xml" media="(prefers-color-scheme: dark)"/>
-	<link href="zkcat13.png" rel="icon" type="image/png" media="(prefers-color-scheme: light)"/>
-	<link href="zkcat13d.png" rel="icon" type="image/png" media="(prefers-color-scheme: dark)"/>
-
+	<link href="zkcat13.svg" rel="icon" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+	<link href="zkcat13d.svg" rel="icon" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+	<link href="zkcat13.png" rel="icon" type="image/png" media="(prefers-color-scheme: light)" />
+	<link href="zkcat13d.png" rel="icon" type="image/png" media="(prefers-color-scheme: dark)" />
 
 	<link rel="stylesheet" href="https://latex.now.sh/style.min.css" />
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 	<style>
 		table,
@@ -37,6 +42,12 @@
 			margin: 0 auto;
 
 		}
+
+		footer {
+			border-top: 1px solid #000;
+			padding-top: 10px;
+			margin-top: 20px;
+		}
 	</style>
 
 </head>
@@ -47,7 +58,7 @@
 
 
 	<h1 style="text-align: center;">
-		<img id="logo" style="display: block; margin: auto" src="zkcat13.svg" alt="barcelona zkday logo" width="20%"/>
+		<img id="logo" style="display: block; margin: auto" src="zkcat13.svg" alt="barcelona zkday logo" width="20%" />
 		<span style="font-size:70%;">(succinct)</span>
 		zkDay Barcelona
 		<br>
@@ -55,8 +66,12 @@
 	</h1>
 
 	<div class="abstract">
-	<h2>Abstract</h2>
-		zkDay Barcelona aims to be a day dedicated to zero-knowledge cryptography and its applications. The event will feature a series of talks by leading experts in the field, covering a wide range of topics from the theoretical foundations of zero-knowledge proofs to the latest developments in the area. The event will also provide an opportunity for networking and collaboration among researchers and practitioners working on zero-knowledge cryptography.
+		<h2>Abstract</h2>
+		zkDay Barcelona aims to be a day dedicated to zero-knowledge cryptography and its applications. The event will
+		feature a series of talks by leading experts in the field, covering a wide range of topics from the theoretical
+		foundations of zero-knowledge proofs to the latest developments in the area. The event will also provide an
+		opportunity for networking and collaboration among researchers and practitioners working on zero-knowledge
+		cryptography.
 	</div>
 
 	<h2>Speakers</h2>
@@ -76,7 +91,7 @@
 	<a target="_blank" href="https://ieeexplore.ieee.org/author/37088234218">
 		Jose Luis Muñoz-Tapia</a>, UPC (Polytechnic University of Catalonia)<br>
 
-	
+
 	<h2>Schedule (to be defined)</h2>
 	<div class="table-container">
 		<table style="text-align: center;">
@@ -153,14 +168,35 @@
 
 
 	<h2>Venue</h2>
-	The venue for this event is the Akasha Hub Barcelona, located at<br>
-		Verneda Street, number 19, Warehouse 1, 08018 Barcelona (Spain).
+	The venue for this event is the <b>Akasha Hub Barcelona.</b><br>
 
-	<!-- the following embedded map has an extra CSS filter to remove colors to make it more aligned with the web style -->
-	<iframe style="margin: 0 auto; filter: grayscale(100%);"
-		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.3022701439163!2d2.1886275770768973!3d41.41095667129679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a3a3517f041d%3A0x6297055e3d4f368!2sAkasha%20Hub%20Barcelona!5e0!3m2!1ses!2ses!4v1707412579202!5m2!1ses!2ses"
-		width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-		referrerpolicy="no-referrer-when-downgrade"></iframe>
+	<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+	<div id="map" style="width: 700px; height: 600px; filter: grayscale(100%)"></div>
+	<script>
+		var map = L.map('map').setView([41.41095, 2.19122], 18);
+
+		L.tileLayer(
+			'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+			{
+				attribution:
+					'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+			}
+		).addTo(map);
+
+		L.marker([41.41095, 2.19122]).addTo(map)
+			.bindPopup('<b>Akasha Hub Barcelona</b><br > Verneda Street, number 19, Warehouse 1, 08018 Barcelona (Spain).')
+			.openPopup();
+	</script>
+
+	<h2>Registration</h2>
+	Registration is free. Please confirm your assistance at <a
+		href="https://lu.ma/zkDayBarcelona">https://lu.ma/zkDayBarcelona</a><label for="sn-1"
+		class="sidenote-toggle sidenote-number"></label>
+	<input type="checkbox" id="sn-1" class="sidenote-toggle" />
+	<span class="sidenote">Name and email are mandatory, but you can use pseoudonyms and/or a fake email.</span>
+
+
 
 	<h2>Sponsors</h2>
 
@@ -185,6 +221,36 @@
 		};
 	</script>
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+	<footer>
+		<div style="display: flex; justify-content: space-between; align-items: center;">
+			<div>
+				Made with ❤️ from Barcelona
+			</div>
+			<div>
+				<span>
+					<a href="https://www.twitter.com/zkBarcelona" style="text-decoration: none;">
+						<i class="fab fa-twitter"></i>
+					</a>
+				</span>
+				<span>
+					<a href="https://www.github.com/zkBarcelona" style="text-decoration: none;">
+						<i class="fab fa-github"></i>
+					</a>
+				</span>
+			</div>
+			<div>
+				Website hosted on
+				<a href="https://github.com/zkbarcelona/barcelona-zkday-web" style="text-decoration: none;">Github</a>
+			</div>
+		</div>
+	</footer>
+
+
+
+
+
 
 </body>
 
