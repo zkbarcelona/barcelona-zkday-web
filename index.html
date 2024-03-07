@@ -8,7 +8,10 @@
 	<title>Barcelona zkDay 2024</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link href="zkcat13.svg" rel="icon" type="image/svg+xml" media="(prefers-color-scheme: light)"/>
+	<link href="zkcat13d.svg" rel="icon" type="image/svg+xml" media="(prefers-color-scheme: dark)"/>
+	<link href="zkcat13.png" rel="icon" type="image/png" media="(prefers-color-scheme: light)"/>
+	<link href="zkcat13d.png" rel="icon" type="image/png" media="(prefers-color-scheme: dark)"/>
 
 
 	<link rel="stylesheet" href="https://latex.now.sh/style.min.css" />
@@ -42,7 +45,14 @@
 	<div id="dark-mode-toggle" style="float:right!important;font-size:150%;cursor:pointer;">☾</div>
 	<br><br>
 
-	<h1 style="text-align: center;"><span style="font-size:70%;">(succinct)</span> zkDay Barcelona <span style="font-size:70%;">- April 22$^\text{nd}$, 2024</span></h1>
+
+	<h1 style="text-align: center;">
+		<img id="logo" style="display: block; margin: auto" src="zkcat13.svg" alt="barcelona zkday logo" width="20%"/>
+		<span style="font-size:70%;">(succinct)</span>
+		zkDay Barcelona
+		<br>
+		<span style="font-size:70%;">April 22$^\text{nd}$, 2024</span>
+	</h1>
 
 	<div class="abstract">
 	<h2>Abstract</h2>
@@ -160,6 +170,8 @@
 		document.querySelector("#dark-mode-toggle")
 			.addEventListener('click', () => {
 				document.body.classList.toggle("latex-dark");
+				let logo = document.getElementById("logo");
+				logo.src = logo.src.includes("zkcat13.svg") ? "zkcat13d.svg" : "zkcat13.svg";
 			});
 
 		// LaTeX (MathJax) config
