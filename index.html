@@ -8,10 +8,10 @@
 	<title>Barcelona zkDay 2024</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="zkcat13.svg" rel="icon" type="image/svg+xml" media="(prefers-color-scheme: light)" />
-	<link href="zkcat13d.svg" rel="icon" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
-	<link href="zkcat13.png" rel="icon" type="image/png" media="(prefers-color-scheme: light)" />
-	<link href="zkcat13d.png" rel="icon" type="image/png" media="(prefers-color-scheme: dark)" />
+	<link href="img/zkcat13.svg" rel="icon" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+	<link href="img/zkcat13d.svg" rel="icon" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+	<link href="img/zkcat13.png" rel="icon" type="image/png" media="(prefers-color-scheme: light)" />
+	<link href="img/zkcat13d.png" rel="icon" type="image/png" media="(prefers-color-scheme: dark)" />
 
 	<link rel="stylesheet" href="https://latex.now.sh/style.min.css" />
 
@@ -58,7 +58,7 @@
 
 
 	<h1 style="text-align: center;">
-		<img id="logo" style="display: block; margin: auto" src="zkcat13.svg" alt="barcelona zkday logo" width="20%" />
+		<img id="logo" style="display: block; margin: auto" src="img/zkcat13.svg" alt="barcelona zkday logo" width="20%" />
 		<span style="font-size:70%;">(succinct)</span>
 		zkDay Barcelona
 		<br>
@@ -199,6 +199,12 @@
 
 
 	<h2>Sponsors</h2>
+	<div style="width:100%;">
+		<a href="https://pse.dev" target="_blank" alt="PSE" title="PSE" style="width:100px;display:block;margin-left:auto;margin-right:auto;">
+			<img src="img/pse-logo.png" />
+		</a>
+	</div>
+	<br>
 
 	<!-- configs -->
 	<script>
@@ -207,7 +213,7 @@
 			.addEventListener('click', () => {
 				document.body.classList.toggle("latex-dark");
 				let logo = document.getElementById("logo");
-				logo.src = logo.src.includes("zkcat13.svg") ? "zkcat13d.svg" : "zkcat13.svg";
+				logo.src = logo.src.includes("img/zkcat13.svg") ? "img/zkcat13d.svg" : "img/zkcat13.svg";
 			});
 
 	</script>
