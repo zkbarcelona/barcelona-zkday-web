@@ -22,7 +22,10 @@
 
 
 	<style>
-		table,
+		table{
+			width: 800px;
+			text-align: center;
+		}
 		th,
 		td {
 			border: 0px solid black;
@@ -38,9 +41,12 @@
 		}
 
 		.table-container {
-			width: max-content;
+			width: 800px;
 			margin: 0 auto;
 
+		}
+		.hours{
+			font-size:85%;
 		}
 
 		footer {
@@ -75,91 +81,99 @@
 	</div>
 
 	<h2>Speakers</h2>
-
-	<a target="_blank" href="https://twitter.com/jbaylina">
-		Jordi Baylina</a>, Polygon zkEVM<br>
-	<a target="_blank" href="https://hecmas.github.io/">
-		Héctor Masip Ardevol</a>, Polygon zkEVM & UPC (Polytechnic University of Catalonia)<br>
-	<a target="_blank" href="https://0xadriatorralba.github.io/">
-		Adrià Torralba-Agell</a>, UOC (Open University of Catalonia)<br>
-	<a target="_blank" href="https://github.com/ed255">
-		Eduard</a>, PSE zkEVM<br>
-	<a target="_blank" href="https://www.linkedin.com/in/javier-silva-800486270/">
-		Javier Silva</a>, =nil; Foundation<br>
-	<a target="_blank" href="https://ieeexplore.ieee.org/author/37088433800">
-		Marta Bellés-Muñoz</a>, Dusk Network<br>
-	<a target="_blank" href="https://ieeexplore.ieee.org/author/37088234218">
-		Jose Luis Muñoz-Tapia</a>, UPC (Polytechnic University of Catalonia)<br>
+	
+	<ul>
+		<li><a target="_blank" href="https://twitter.com/jbaylina">
+			Jordi Baylina</a>, Polygon zkEVM<br></li>
+		<li><a target="_blank" href="https://hecmas.github.io/">
+			Héctor Masip Ardevol</a>, Polygon zkEVM & UPC (Polytechnic University of Catalonia)<br>
+		<li><a target="_blank" href="https://0xadriatorralba.github.io/">
+			Adrià Torralba-Agell</a>, UOC (Open University of Catalonia)<br></li>
+		<li><a target="_blank" href="https://github.com/ed255">
+			Eduard</a>, PSE zkEVM<br></li>
+		<li><a target="_blank" href="https://www.linkedin.com/in/javier-silva-800486270/">
+			Javier Silva</a>, =nil; Foundation<br></li>
+		<li><a target="_blank" href="https://twitter.com/therealyingtong">
+			Ying Tong</a>, Geometry<br></li>
+	</ul>
 
 
 	<h2>Schedule (to be defined)</h2>
+	
+	WIP: order is not definitive, we're just filling the titles and descriptions for the moment.
+
 	<div class="table-container">
 		<table style="text-align: center;">
 			<tr>
-				<th>Time</th>
-				<th>Title</th>
-				<th>Speaker</th>
+				<th style="min-width:100px;">Time</th>
+				<th style="min-width:200px;">Title</th>
+				<th style="min-width:130px;">Speaker</th>
 				<th>Description</th>
+				<!-- <th>Recommended read before the talk</th> -->
 			</tr>
 			<tr style="border-top: 2px solid black;">
-				<td style="text-align: center;">14.00h</td>
+				<td style="text-align: center;" class="hours">14.00h</td>
 				<td style="text-align: center;" colspan="3">Doors open</td>
 			</tr>
 			<tr style="border-bottom: 3px double black;">
-				<td style="text-align: center;">14.45h</td>
+				<td style="text-align: center;" class="hours">14.45h</td>
 				<td style="text-align: center;" colspan="3"><b>Welcome to Barcelona zkDay 2024</b></td>
 			</tr>
 
 			<tr>
-				<td>15.00h - 15.30h</td>
-				<td><!--Presentation 1 title--></td>
-				<td>TBD<!--Speaker Name 1--></td>
-				<td><!--Brief description 1--></td>
+				<td class="hours">15.00h - 15.30h</td>
+				<td style="font-weight:bold;">Recursion in zk(E)VMs</td>
+				<td>Jordi Baylina</td>
+				<td>[TBA]</td>
 			</tr>
 			<tr>
-				<td>15.30h - 16.00h</td>
-				<td><!--Presentation 2 title--></td>
-				<td>TBD<!--Speaker Name 2--></td>
-				<td><!--Brief description 2--></td>
+				<td class="hours">15.30h - 16.00h</td>
+				<td style="font-weight:bold;">How to get pairings in a zkEVM</td>
+				<td>Héctor Masip Ardevol</td>
+				<td>While initially devised for cryptanalysis, pairings are now fundamental in many cryptographic protocols where no other efficient alternative exists. However, despite their widespread use, pairings still remain a mystery for many practitioners. In this talk, we aim to demystify them by explaining their implementation within Polygon's zkEVM, which presents considerable resource restrictions for such feat.</td>
 			</tr>
 			<tr class="break-row">
-				<td>16.00h - 16.10h</td>
+				<td class="hours">16.00h - 16.10h</td>
 				<td colspan="3">Break (10 minutes)</td>
 			</tr>
 			<tr>
-				<td>16.10h - 16.40h</td>
-				<td><!--Presentation 3 title--></td>
-				<td>TBD<!--Speaker Name 3--></td>
-				<td><!--Brief description 3--></td>
+				<td class="hours">16.10h - 16.40h</td>
+				<td style="font-weight:bold;">Next-generation lookup arguments</td>
+				<td>Ying Tong</td>
+				<td>A comparison of newer lookup arguments and their use-cases, including benchmarks from experimental halo2 implementations. In particular, we consider the optimisations available for fixed vs. dynamic lookups, and monolithic vs. decomposable lookups.</td>
 			</tr>
 			<tr>
-				<td>16.40h - 17.10h</td>
-				<td><!--Presentation 4 title--></td>
-				<td>TBD<!--Speaker Name 4--></td>
-				<td><!--Brief description 4--></td>
+				<td class="hours">16.40h - 17.10h</td>
+				<td style="font-weight:bold;">Understanding KZG commitments</td>
+				<td>Adrià Torralba-Agell</td>
+				<td>Commitments play a pivotal role in the ongoing developments of zero-knowledge proofs. 
+					Specifically, KZG commitments, which represent a polynomial commitment scheme requiring a trusted setup, 
+					are crucial due to their application in numerous zero-knowledge frameworks like PlonK. 
+					Moreover, proto-danksharding, also known as EIP-4844, an essential Ethereum Improvement Proposal 
+					focusing on data availability, has already incorporated KZG as its commitment scheme.</td>
 			</tr>
 			<tr class="break-row">
-				<td>17.10h - 17.20h</td>
+				<td class="hours">17.10h - 17.20h</td>
 				<td colspan="3">Break (10 minutes)</td>
 			</tr>
 			<tr>
-				<td>17.20h - 17.50h</td>
-				<td><!--Presentation 5 title--></td>
-				<td>TBD<!--Speaker Name 5--></td>
-				<td><!--Brief description 5--></td>
+				<td class="hours">17.20h - 17.50h</td>
+				<td style="font-weight:bold;">Review of RISCV zkVMs</td>
+				<td>Eduard</td>
+				<td>We will review what is a RISCV zkVM and compare some of the current projects working on this solution.</td>
 			</tr>
 			<tr>
-				<td>17.50h - 18.20h</td>
-				<td><!--Presentation 6 title--></td>
-				<td>TBD<!--Speaker Name 6--></td>
-				<td><!--Brief description 6--></td>
+				<td class="hours">17.50h - 18.20h</td>
+				<td style="font-weight:bold;">Where does security come from?</td>
+				<td>Javier Silva</td>
+				<td>We often hear that a certain proof system is targeting 80-bit security, or that a certain elliptic curve has around 100-bit security. In this introductory talk, I will discuss exactly what these security levels measure, and how they are determined. In particular, I will focus on modern proof systems, and how different choices in the design can influence the final security level.</td>
 			</tr>
 			<tr class="break-row" style="border-bottom: 2px solid black;">
-				<td>18.20h - 21.00h</td>
+				<td class="hours">18.20h - 21.00h</td>
 				<td colspan="3">Closing remarks and drinks</td>
 			</tr>
 			<tr class="break-row" style="border-bottom: 2px solid black;">
-				<td>21.00h</td>
+				<td class="hours">21.00h</td>
 				<td colspan="3">Dinner at restaurant</td>
 			</tr>
 		</table>
@@ -168,7 +182,7 @@
 
 
 	<h2>Venue</h2>
-	The venue for this event is the <b><a href="https://akasha.barcelona" target="_blank">Akasha Hub Barcelona.</a></b><br>
+	The venue for this event is the <b><a href="https://akasha.barcelona" target="_blank">Akasha Hub Barcelona</a></b>.<br>
 
 	<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
@@ -195,7 +209,7 @@
 		class="sidenote-toggle sidenote-number"></label>
 	<input type="checkbox" id="sn-1" class="sidenote-toggle" />
 	<span class="sidenote">Name and email are mandatory, you can use pseoudonyms, but we will use the email to communicate updates of the event.</span>
-
+	.
 
 
 	<h2>Sponsors</h2>
